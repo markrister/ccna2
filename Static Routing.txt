@@ -1,0 +1,25 @@
+Static Routing
+
+Destination, Mask, Next-Hop/Exit Int
+
+R1
+conf t
+ip route 10.1.1.8 255.255.255.252 10.1.1.2
+end
+ping 10.1.1.5
+
+R2
+conf t
+ip route 10.1.1.8 255.255.255.252 10.1.1.6
+end
+
+
+R3
+conf t
+ip route 10.1.1.0 255.255.255.252 10.1.1.5
+end
+
+R4
+conf t
+ip route 10.1.1.0 255.255.255.252 10.1.1.9
+end
